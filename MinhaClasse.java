@@ -1,12 +1,15 @@
 public class MinhaClasse {    
 
     public static void main (String [] args) {
-        String primeiro = "Andre";
-        String segundo = "Chamelete";
+        int a, b;;
+        a = 5;
+        b = a;
 
-        String nome = nomeCompleto(primeiro, segundo);
+        System.out.println(a);
 
-        System.out.println(nome);
+        int res = a == b ? 1 : 0;
+
+        System.out.println(res);
 
     }
 
