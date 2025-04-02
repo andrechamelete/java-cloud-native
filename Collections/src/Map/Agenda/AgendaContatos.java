@@ -32,4 +32,15 @@ public class AgendaContatos {
         }
         return numeroPorNome;
     }
+
+    public static void main(String[] args) {
+        AgendaContatos agendaContatos = new AgendaContatos();
+
+        agendaContatos.adicionarContato("Camila", 123456);
+        agendaContatos.adicionarContato("Andre Cavalcante", 5665);
+        agendaContatos.adicionarContato("Camila", 456789);
+        agendaContatos.adicionarContato("Mary", 456789);
+
+        agendaContatos.exibirContatos();
+    }
 }
