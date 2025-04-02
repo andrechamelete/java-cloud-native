@@ -1,4 +1,4 @@
-package Produtos;
+package Set.Produtos;
 
 import java.util.Comparator;
 import java.util.Objects;

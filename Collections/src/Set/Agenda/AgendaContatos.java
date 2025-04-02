@@ -1,4 +1,4 @@
-package Agenda;
+package Set.Agenda;
 
 import java.util.HashSet;
 import java.util.Set;

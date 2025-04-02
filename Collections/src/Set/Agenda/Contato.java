@@ -1,4 +1,4 @@
-package Agenda;
+package Set.Agenda;
 
 import java.util.Objects;
 

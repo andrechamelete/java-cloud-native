@@ -1,4 +1,4 @@
-package Convidados;
+package Set.Convidados;
 
 import java.util.Set;
 import java.util.HashSet;
