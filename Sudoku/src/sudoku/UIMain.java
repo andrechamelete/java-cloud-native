@@ -13,6 +13,6 @@ public class UIMain {
             ));
         
         var mainScreen = new MainScreen(gameConfig);
-        mainScreen.buildMainScreen();;
+        mainScreen.buildMainScreen();
     }
 }

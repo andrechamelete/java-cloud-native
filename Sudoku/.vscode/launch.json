@@ -9,7 +9,8 @@
             "name": "UIMain",
             "request": "launch",
             "mainClass": "sudoku.UIMain",
-            "projectName": "Sudoku_1f5f990b"
+            "projectName": "Sudoku_1f5f990b",
+            "args": "0,0;8,true 1,1;5,true 2,2;3,false"
         },
         {
             "type": "java",
