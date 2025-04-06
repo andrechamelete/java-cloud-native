@@ -5,8 +5,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-public class MainFrame extends JFrame{
-    public MainFrame(final Dimension dimension, final JPanel mainPanel) {
+public class MainFrame extends JFrame {
+
+    public MainFrame(final Dimension dimension, final JPanel mainPanel){
         super("Sudoku");
         this.setSize(dimension);
         this.setPreferredSize(dimension);

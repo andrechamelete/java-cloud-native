@@ -1,15 +1,19 @@
 package sudoku.ui.custom.input;
 
 import sudoku.model.Space;
+import sudoku.service.EventEnum;
+import sudoku.service.EventListener;
 
 import java.awt.Dimension;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.Font;
-import static java.awt.Font.PLAIN;
 
-public class NumberText extends JTextField{
+import static java.awt.Font.PLAIN;
+import static sudoku.service.EventEnum.CLEAR_SPACE;
+
+public class NumberText extends JTextField implements EventListener {
 
     private final Space space;
 
@@ -23,11 +27,10 @@ public class NumberText extends JTextField{
         this.setHorizontalAlignment(CENTER);
         this.setDocument(new NumberTextLimit());
         this.setEnabled(!space.isFixed());
-        if (space.isFixed()) {
+        if (space.isFixed()){
             this.setText(space.getActual().toString());
         }
         this.getDocument().addDocumentListener(new DocumentListener() {
-
 
             @Override
             public void insertUpdate(final DocumentEvent e) {
@@ -44,15 +47,21 @@ public class NumberText extends JTextField{
                 changeSpace();
             }
 
-            private void changeSpace() {
-                if(getText().isEmpty()) {
+            private void changeSpace(){
+                if (getText().isEmpty()){
                     space.clearSpace();
                     return;
                 }
                 space.setActual(Integer.parseInt(getText()));
-
             }
+
         });
     }
-    
+
+    @Override
+    public void update(final EventEnum eventType) {
+        if (eventType.equals(CLEAR_SPACE) && (this.isEnabled())){
+            this.setText("");
+        }
+    }
 }

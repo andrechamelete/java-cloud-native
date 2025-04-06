@@ -9,7 +9,7 @@ import sudoku.model.GameStatusEnum;
 import sudoku.model.Space;
 
 public class BoardService {
-    
+
     private final static int BOARD_LIMIT = 9;
 
     private final Board board;
@@ -18,27 +18,27 @@ public class BoardService {
         this.board = new Board(initBoard(gameConfig));
     }
 
-    public List<List<Space>> getSpaces() {
-        return this.board.getSpaces();
+    public List<List<Space>> getSpaces(){
+        return board.getSpaces();
     }
 
-    public void reset() {
-        this.board.reset();
+    public void reset(){
+        board.reset();
     }
 
-    public boolean hasErrors() {
-        return this.board.hasErrors();
+    public boolean hasErrors(){
+        return board.hasErrors();
     }
 
-    public GameStatusEnum getStatus() {
+    public GameStatusEnum getStatus(){
         return board.getStatus();
     }
 
-    public boolean gameIsFinished() {
+    public boolean gameIsFinished(){
         return board.gameIsFinished();
     }
 
-    public List<List<Space>> initBoard(final Map<String, String> gameConfig) {
+    private List<List<Space>> initBoard(final Map<String, String> gameConfig) {
         List<List<Space>> spaces = new ArrayList<>();
         for (int i = 0; i < BOARD_LIMIT; i++) {
             spaces.add(new ArrayList<>());
