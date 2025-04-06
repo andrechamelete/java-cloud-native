@@ -1,4 +1,4 @@
-[![Demonstração do Sudoku](https://img.youtube.com/vi/ID_DO_VIDEO/hqdefault.jpg)](https://github.com/andrechamelete/java-cloud-native/edit/main/Sudoku/Sudoku.mp4)
+[![Demonstração do Sudoku]((https://github.com/andrechamelete/java-cloud-native/edit/main/Sudoku/Sudoku.mp4))](https://github.com/andrechamelete/java-cloud-native/edit/main/Sudoku/Sudoku.mp4)
 
 ## Getting Started
 
