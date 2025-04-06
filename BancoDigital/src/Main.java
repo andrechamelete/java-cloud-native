@@ -12,7 +12,7 @@ public class Main {
 
         cc.depositar(500);
 
-        cc.transferir(200, cp);
+        cc.transferir(200, cp.getAgencia(), cp.getNumero(), banco);
 
         System.out.println(banco.buscarConta(1, 1));
         System.out.println(banco.buscarConta(1, 2));

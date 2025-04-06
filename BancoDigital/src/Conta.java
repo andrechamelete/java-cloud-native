@@ -22,9 +22,22 @@ public abstract class Conta {
         this.saldo += valor;
     }
 
-    public void transferir(double valor, Conta contaDestino) {
+    public void transferir(double valor, int agenciaDestino, int numeroDestino, Banco banco) {
+        Conta contaDestino = banco.buscarConta(agenciaDestino, numeroDestino);
+        if (contaDestino == null) {
+            System.out.println("Conta de destino náo encontrada");
+            return;
+        }
+
+        if (this.saldo < valor) {
+            System.out.println("Saldo insuficiente");
+            return;
+        }
+
         this.sacar(valor);
         contaDestino.depositar(valor);
+
+        System.out.println(String.format("Transferência de R$%.2f realizada para a conta %d - agência %d.", (double) valor, numeroDestino, agenciaDestino));
     }
 
     protected void imprimirInfosComuns() {
