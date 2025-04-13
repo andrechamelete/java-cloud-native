@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
-
 import api_spring_swagger.handler.CampoObrigatorioException;
 import api_spring_swagger.model.Usuario;
 
