@@ -11,13 +11,13 @@ import jakarta.persistence.Id;
 public class Card {
     
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(unique = true)
     private String number;
 
-    @Column(name = "card_limit", precision = 2, scale = 13)
+    @Column(name = "card_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {
@@ -37,7 +37,5 @@ public class Card {
     }
     public void setLimit(BigDecimal limit) {
         this.limit = limit;
-    }
-
-    
+    }    
 }
